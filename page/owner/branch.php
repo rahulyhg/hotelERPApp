@@ -5,11 +5,11 @@ class page_hotelERPApp_page_owner_branch extends page_componentBase_page_owner_m
 		//$crud=$this->add('CRUD');
 		//$crud->setModel('hotelERPApp/Master_Branch');
 
-		$crudbranch=$this->add('CRUD'); 
-		$crudbranch->setModel('hotelERPApp/Master_Branch');
-		if($crudbranch->grid){
+		$branch_crud=$this->add('CRUD'); 
+		$branch_crud->setModel('hotelERPApp/Master_Branch');
+		if($branch_crud->grid){
 			
-			$crudbranch->add_button->set('Add Branch Head Name');
+			$branch_crud->add_button->set('Add Branch Head Name');
 		}
 	}
 }

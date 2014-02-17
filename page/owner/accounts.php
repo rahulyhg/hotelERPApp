@@ -5,11 +5,11 @@ class page_hotelERPApp_page_owner_accounts extends page_componentBase_page_owner
 		/*$crud=$this->add('CRUD');
 		$crud->setModel('hotelERPApp/Master_Accounts');*/
 
-		$crudacc=$this->add('CRUD'); 
-		$crudacc->setModel('hotelERPApp/Master_Accounts');
-		if($crudacc->grid){
+		$account_crud=$this->add('CRUD'); 
+		$account_crud->setModel('hotelERPApp/Master_Accounts');
+		if($account_crud->grid){
 			
-			$crudacc->add_button->set('Add Account');
+			$account_crud->add_button->set('Add Account');
 		}
 		
 	}

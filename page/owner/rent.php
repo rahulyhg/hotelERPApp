@@ -5,11 +5,11 @@ class page_hotelERPApp_page_owner_rent extends page_componentBase_page_owner_mai
 		/*$crud=$this->add('CRUD');
 		$crud->setModel('hotelERPApp/Master_Rent');*/
 
-		$crudrent=$this->add('CRUD'); 
-		$crudrent->setModel('hotelERPApp/Master_Rent');
-		if($crudrent->grid){
+		$rent_crud=$this->add('CRUD'); 
+		$rent_crud->setModel('hotelERPApp/Master_Rent');
+		if($rent_crud->grid){
 			
-			$crudrent->add_button->set('Add Rent');
+			$rent_crud->add_button->set('Add Rent');
 		}
 	}
 }

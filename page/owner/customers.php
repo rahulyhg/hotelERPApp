@@ -5,11 +5,11 @@ class page_hotelERPApp_page_owner_customers extends page_componentBase_page_owne
 		/*$crud=$this->add('CRUD');
 		$crud->setModel('hotelERPApp/Master_Customers');*/
 
-		$crudcustomer=$this->add('CRUD'); 
-		$crudcustomer->setModel('hotelERPApp/Master_Customers');
-		if($crudcustomer->grid){
+		$customer_crud=$this->add('CRUD'); 
+		$customer_crud->setModel('hotelERPApp/Master_Customers');
+		if($customer_crud->grid){
 			
-			$crudcustomer->add_button->set('Add Customer Name');
+			$customer_crud->add_button->set('Add Customer Name');
 		}
 	}
 }

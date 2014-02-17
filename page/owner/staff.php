@@ -5,11 +5,11 @@ class page_hotelERPApp_page_owner_staff extends page_componentBase_page_owner_ma
 		/*$crud=$this->add('CRUD');
 		$crud->setModel('hotelERPApp/Master_Staff');*/
 
-		$crudstaff=$this->add('CRUD'); 
-		$crudstaff->setModel('hotelERPApp/Master_Staff');
-		if($crudstaff->grid){
+		$staff_crud=$this->add('CRUD'); 
+		$staff_crud->setModel('hotelERPApp/Master_Staff');
+		if($staff_crud->grid){
 			
-			$crudstaff->add_button->set('Add Staff');
+			$staff_crud->add_button->set('Add Staff');
 		}
 	}
 }

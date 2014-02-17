@@ -5,11 +5,11 @@ class page_hotelERPApp_page_owner_packages extends page_componentBase_page_owner
 		//$crud=$this->add('CRUD');
 		//$crud->setModel('hotelERPApp/Master_Packages');
 
-		$crudpack=$this->add('CRUD'); 
-		$crudpack->setModel('hotelERPApp/Master_Packages');
-		if($crudpack->grid){
+		$packages_crud=$this->add('CRUD'); 
+		$packages_crud->setModel('hotelERPApp/Master_Packages');
+		if($packages_crud->grid){
 			
-			$crudpack->add_button->set('Add Packages');
+			$packages_crud->add_button->set('Add Packages');
 		}
 	}
 }

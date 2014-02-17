@@ -3,11 +3,11 @@ class page_hotelERPApp_page_owner_hotel extends page_componentBase_page_owner_ma
 	function init(){
 		parent::init();
 		//$crud=$this->add('CRUD');
-		$crudhotel=$this->add('CRUD'); 
-		$crudhotel->setModel('hotelERPApp/Master_Hotel'); 
-		if($crudhotel->grid){
+		$hotel_crud=$this->add('CRUD'); 
+		$hotel_crud->setModel('hotelERPApp/Master_Hotel'); 
+		if($hotel_crud->grid){
 
-			$crudhotel->add_button->set('Add Hotel Branch');
+			$hotel_crud->add_button->set('Add Hotel Branch');
 		}
 		//$crud->setModel('hotelERPApp/Master_Hotel');
 	}
