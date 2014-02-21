@@ -7,8 +7,9 @@ class Model_Master_Services extends \Model_Table
 	{
 		parent::init();
 		
-		$this->addField('service_name');
+		$this->addField('name');
 		$this->hasMany('Staff','services_id');
+		$this->hasMany('Customers','services_id');
 		$this->add('dynamic_model/Controller_AutoCreator');
 
 	}

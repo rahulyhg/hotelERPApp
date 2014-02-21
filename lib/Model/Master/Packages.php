@@ -6,7 +6,8 @@ class Model_Master_Packages extends \Model_Table
 	function init()
 	{
 		parent::init();
-		$this->addField('package_name');
+		$this->addField('name');
+		$this->addField('amount');
 		$this->add('dynamic_model/Controller_AutoCreator');
 
 	}
