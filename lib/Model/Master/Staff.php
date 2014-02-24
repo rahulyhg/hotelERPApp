@@ -6,7 +6,7 @@ class Model_Master_Staff extends \Model_Table
 	function init()
 	{
 		parent::init();
-		$this->addField('staff_name');
+		$this->addField('name');
 		$this->hasMany('Accounts','staff_id');
 		$this->add('dynamic_model/Controller_AutoCreator');
 

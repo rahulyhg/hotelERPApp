@@ -6,7 +6,7 @@ class Model_Master_Rent extends \Model_Table
 	function init()
 	{
 		parent::init();
-		$this->addField('rent');
+		$this->addField('name');
 		$this->hasMany('Branch','hotel_id');
 		$this->add('dynamic_model/Controller_AutoCreator');
 
