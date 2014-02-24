@@ -3,7 +3,7 @@ namespace hotelERPApp;
 class Model_Staffmgmt_Staffmember extends \Model_Table
 {
 	public $table='hotelERPApp_staff';
-<<<<<<< HEAD
+
 	function init()
 	{
 		parent::init();
@@ -26,12 +26,3 @@ class Model_Staffmgmt_Staffmember extends \Model_Table
 
 	}
 } 
-=======
-	function init(){
-		parent::init();
-		
-
-	    
-	}
-}
->>>>>>> 4a2def41aa602ae2ff7a5cb117ba9e22aef77ec3
