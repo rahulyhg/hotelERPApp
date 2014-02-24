@@ -3,6 +3,7 @@ namespace hotelERPApp;
 class Model_Service_Guide extends \Model_Table
 {
 	public $table='hotelERPApp_guide';
+<<<<<<< HEAD
 	function init()
 	{
 		parent::init();
@@ -15,3 +16,12 @@ class Model_Service_Guide extends \Model_Table
 
 	}
 } 
+=======
+	function init(){
+		parent::init();
+		
+
+	    $this->hasMany('hotelERPApp/Master_Customer','hotelERPApp_guide_id');
+	}
+}
+>>>>>>> 4a2def41aa602ae2ff7a5cb117ba9e22aef77ec3
