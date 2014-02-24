@@ -6,9 +6,13 @@ class Model_Master_Hotel extends \Model_Table
 	function init()
 	{
 		parent::init();
-		$this->addField('name')->caption('Hotel Name');
-		$this->hasMany('hotelERPApp/Master_Branch','hotelERPApp_hotel_id');
+		$this->addField('branch_reg_no')->caption('Branch Registeration Number');
+		$this->addField('branch_name')->caption('Branch Name');
+		$this->addField('branch_head')->caption('Head Name');
+		
+
+		$this->hasMany('hotelERPApp/Master_Branch','hotel_id');
 		$this->add('dynamic_model/Controller_AutoCreator');
 
 	}
-}
+} 
