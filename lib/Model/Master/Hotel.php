@@ -9,6 +9,9 @@ class Model_Master_Hotel extends \Model_Table
 		$this->addField('branch_reg_no')->caption('Branch Registeration Number');
 		$this->addField('branch_name')->caption('Branch Name');
 		$this->addField('branch_head')->caption('Head Name');
+		$this->addField('branch_location')->caption('Location');
+		$this->addField('branch_uname')->caption('User Name');
+		$this->addField('branch_password')->caption('Password');
 		
 
 		$this->hasMany('hotelERPApp/Master_Branch','hotel_id');

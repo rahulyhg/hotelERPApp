@@ -1,0 +1,14 @@
+<?php
+namespace hotelERPApp;
+class Model_Roommgmt_Room extends \Model_Table
+{
+	public $table='hotelERPApp_room';
+	function init(){
+		parent::init();
+		$this->addField('name')->caption('Room Category');
+		$this->addField('room_type')->caption('Room Type');
+		$this->addField('room_no')->caption('Room Number');
+		
+	    
+	}
+}

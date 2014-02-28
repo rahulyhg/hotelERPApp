@@ -8,7 +8,6 @@ class Model_Master_Branch extends \Model_Table
 		parent::init();
 		 $this->hasOne('hotelERPApp/Master_Hotel','hotelERPApp_hotel_id');
 		 
-		$this->addField('branch_location')->caption('Location');
 		$this->addField('branch_address')->caption('Address');
 		$this->addField('branch_contact_no')->caption('Contact Number');
 		$this->addField('branch_email')->caption('E-mail');

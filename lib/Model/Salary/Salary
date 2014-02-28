@@ -1,0 +1,20 @@
+<?php
+namespace hotelERPApp;
+class Model_Salary_Salary extends \Model_Table
+{
+	public $table='hotelERPApp_salary';
+	function init(){
+		parent::init();
+		$this->addField('name')->caption('Employee Name');
+		$this->addField('f_name')->caption('Father Name');
+		$this->addField('emp_code')->caption('Employee Code');
+		$this->addField('dept_no')->caption('Department Number');
+		$this->addField('basic_salary')->caption('Basic Salary');
+		$this->addField('incentive')->caption('Incentive');
+		$this->addField('ta')->caption('TA');
+		$this->addField('da')->caption('DA');
+		$this->addField('hra')->caption('HRA');
+		$this->addField('total_salary')->caption('Total Salary');
+	
+	}
+}
