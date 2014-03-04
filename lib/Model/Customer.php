@@ -1,15 +1,15 @@
 <?php
 namespace hotelERPApp;
-class Model_Customer_Guestbook extends \Model_Table{
-	public $table='hotelERPApp_guestbook';
+class Model_Customer extends \Model_Table{
+	public $table='hotelERPApp_customer';
 	function init(){
 		parent::init();
-		$this->hasOne('hotelERPApp/Master_Branch','branch_id');
-		//$this->hasOne('hotelERPApp/Packages_Package','package_id');
+		$this->hasOne('hotelERPApp/Branch','branch_id');
+		$this->hasOne('hotelERPApp/Package','package_id');
 
 		$this->addField('name');
-		$this->addField('id_type')->caption('Id Card Type');
-		$this->addField('id_no')->caption('Id Card Number');
+		// $this->addField('id_type')->caption('Id Card Type');
+		// $this->addField('id_no')->caption('Id Card Number');
 		$this->addField('gender')->caption('Gender');
 		$this->addField('date')->caption('Date of Booking');
 		$this->addField('from')->caption('From');
@@ -26,8 +26,8 @@ class Model_Customer_Guestbook extends \Model_Table{
 		$this->addField('is_active')->caption('Is Active');
 
 		
-		$this->hasMany('hotelERPApp/Service_Services','guestbook_id');
-		$this->hasMany('hotelERPApp/Roommgmt_Room','guestbook_id');
+		$this->hasMany('hotelERPApp/Services','customer_id');
+		$this->hasMany('hotelERPApp/Room','customer_id');
 
 		$this->add('dynamic_model/Controller_AutoCreator');
 

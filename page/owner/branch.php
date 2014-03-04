@@ -3,7 +3,7 @@ class page_hotelERPApp_page_owner_branch extends page_componentBase_page_owner_m
 	function init(){
 		parent::init();
 		$branch_crud=$this->add('CRUD'); 
-		$branch_crud->setModel('hotelERPApp/Master_Branch');
+		$branch_crud->setModel('hotelERPApp/Branch');
 		if($branch_crud->grid)
 		{
 

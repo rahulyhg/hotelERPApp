@@ -1,9 +1,9 @@
 <?php
-class page_hotelERPApp_page_owner_guestbook extends page_componentBase_page_owner_main{
+class page_hotelERPApp_page_owner_customer extends page_componentBase_page_owner_main{
 	function init(){
 		parent::init();
 		$crud=$this->add('CRUD'); 
-		$crud->setModel('hotelERPApp/Customer_Guestbook');
+		$crud->setModel('hotelERPApp/Model_Customer');
 		if($crud->grid)
 		{
 
