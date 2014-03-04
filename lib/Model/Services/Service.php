@@ -8,6 +8,8 @@ class Model_Services_Service extends \Model_Table
 		$this->addField('name')->caption('Service Name');
 		$this->addField('service_desc')->caption('Service Description');
 		$this->addField('service_price')->caption('Service Price');
+
+		$this->hasMany('hotelERpApp/Customer_Guestbook','service_id');
 		
 	    
 	}

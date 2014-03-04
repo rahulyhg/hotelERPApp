@@ -2,21 +2,14 @@
 class page_hotelERPApp_page_owner_main extends page_componentBase_page_owner_main{
 	function init(){
 		parent::init();
-		//$crud=$this->add('CRUD');
-		$hotel_crud=$this->add('CRUD'); 
-		$hotel_crud->setModel('hotelERPApp/Master_Hotel'); 
-		if($hotel_crud->grid)
-		{
+		// $tabhotel=$this->add('Tabs');
+		// $tabhotel->addTabURL('hotelERPApp_page_owner_hotel','Hotel');
+		// $tabhotel->addTabURL('hotelERPApp_page_owner_branch','Branch');
+		$menu=$this->add('Menu',null);
 
-			$hotel_crud->add_button->set('Add Hotel Branch');
-		}
-		$hotel_crud=$this->add('CRUD'); 
-		$hotel_crud->setModel('hotelERPApp/Master_Branch'); 
-		if($hotel_crud->grid)
-		{
-
-			$hotel_crud->add_button->set('Add Branch Head');
-		}
-		//$crud->setModel('hotelERPApp/Master_Hotel');
+            $menu->addMenuItem('hotelERPApp_page_owner_hotel','Hotel');
+            $menu->addMenuItem('hotelERPApp_page_owner_branch','Branch');
+            $menu->addMenuItem('hotelERPApp_page_owner_guestbook','New Customer');
+		
 	}
 }

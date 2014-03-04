@@ -9,6 +9,7 @@ class Model_Roommgmt_Room extends \Model_Table
 		$this->addField('room_type')->caption('Room Type');
 		$this->addField('room_no')->caption('Room Number');
 		
+		
 	    
 	}
 }
