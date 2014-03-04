@@ -7,9 +7,9 @@ class Model_Customer extends \Model_Table{
 		$this->hasOne('hotelERPApp/Branch','branch_id');
 		$this->hasOne('hotelERPApp/Package','package_id');
 
-		$this->addField('name');
-		// $this->addField('id_type')->caption('Id Card Type');
-		// $this->addField('id_no')->caption('Id Card Number');
+		$this->addField('name')->caption('Customer Name');
+		$this->addField('idtype')->caption('Id Card Type');
+		$this->addField('idno')->caption('Id Card Number');
 		$this->addField('gender')->caption('Gender');
 		$this->addField('date')->caption('Date of Booking');
 		$this->addField('from')->caption('From');

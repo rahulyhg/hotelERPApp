@@ -6,9 +6,10 @@ class Model_Branch extends \Model_Table
 	function init()
 	{
 		parent::init();
+		
 		 $this->hasOne('hotelERPApp/Hotel','hotel_id');
 		 
-		$this->addField('name');
+		// $this->addField('name')->caption('Branch Mgr Name');
 		$this->addField('branch_address')->caption('Address');
 		// $this->addField('branch_address')->caption('Address');
 		$this->addField('branch_contact_no')->caption('Contact Number');
