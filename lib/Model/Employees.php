@@ -1,11 +1,11 @@
 <?php
 namespace hotelERPApp;
-class Model_Employee_Employees extends \Model_Table
+class Model_Employees extends \Model_Table
 {
 	public $table='hotelERPApp_employees';
 	function init(){
 		parent::init();
-		$this->hasOne('hotelERPApp/Master_Branch','branch_id');
+		$this->hasOne('hotelERPApp/Branch','branch_id');
 		
 		$this->addField('name')->caption('Employee Name');
 		$this->addField('f_name')->caption('Father Name');
@@ -23,7 +23,7 @@ class Model_Employee_Employees extends \Model_Table
 		$this->addField('account_no')->caption('Account Number');
 		$this->addField('is_active')->caption('Is Active');
 
+		$this->add('dynamic_model/Controller_AutoCreator');
 
-	//    $this->hasMany('hotelERPApp/Master_Bookingcustomer','hotelERPApp_booking_id');
 	}
 }
