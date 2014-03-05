@@ -7,7 +7,7 @@ class Model_Customer_Guestbook extends \Model_Table{
 		$this->hasOne('hotelERPApp/Master_Branch','branch_id');
 		//$this->hasOne('hotelERPApp/Packages_Package','package_id');
 
-		$this->addField('name');
+		$this->addField('name')->caption('Customer Name');
 		$this->addField('id_type')->caption('Id Card Type');
 		$this->addField('id_no')->caption('Id Card Number');
 		$this->addField('gender')->caption('Gender');
