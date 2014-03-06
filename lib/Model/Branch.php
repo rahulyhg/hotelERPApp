@@ -7,11 +7,10 @@ class Model_Branch extends \Model_Table
 	{
 		parent::init();
 		
-		 $this->hasOne('hotelERPApp/Hotel','hotel_id');
+		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		 
 		
 		$this->addField('branch_address')->caption('Address');
-		
 		$this->addField('branch_contact_no')->caption('Contact Number');
 		$this->addField('branch_email')->caption('E-mail');
 

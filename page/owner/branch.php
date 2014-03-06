@@ -4,6 +4,7 @@ class page_hotelERPApp_page_owner_branch extends page_componentBase_page_owner_m
 		parent::init();
 		// $branch_crud->setModel('hotelERPApp/Branch');
 		$branch=$this->add('hotelERPApp/Model_Branch');
+		
 		$hotel=$branch->join('hotelERPApp_hotel','hotel_id');
 		$hotel->addField('head','branch_head')->type('readonly');
 		$hotel->addField('branchname','name')->type('readonly');

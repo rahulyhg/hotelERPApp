@@ -6,23 +6,17 @@ class Model_Customer extends \Model_Table{
 		parent::init();
 		$this->hasOne('hotelERPApp/Branch','branch_id');
 		$this->hasOne('hotelERPApp/Package','package_id');
-
-		$this->addField('name')->caption('Customer Name');
-
-		$this->addField('id_type')->caption('Id Card Type');
+		$this->hasOne('hotelERPApp/Roomcategory','roomcategory_id');
+		$this->hasOne('hotelERPApp/Roomtype','roomtype_id');
+		$this->hasOne('hotelERPApp/Idcardtype','idcardtype_id');
 		$this->addField('id_no')->caption('Id Card Number');
-
-		$this->addField('idtype')->caption('Id Card Type');
-		$this->addField('idno')->caption('Id Card Number');
-
+		$this->addField('name')->caption('Customer Name');
 		$this->addField('gender')->caption('Gender');
 		$this->addField('date')->caption('Date of Booking');
 		$this->addField('from')->caption('From');
 		$this->addField('to')->caption('To');
 		$this->addField('actual_checkin')->caption('Actual Check In Date');
 		$this->addField('actual_checkout')->caption('Actual Check Out Date');
-		$this->addField('room_category')->caption('Room Category');
-		$this->addField('room_type')->caption('Room Type');
 		$this->addField('no_of_person')->caption('Number of Persons');
 		$this->addField('room_no')->caption('Room Number');
 		$this->addField('address')->caption('Address');
