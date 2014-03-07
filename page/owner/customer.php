@@ -7,7 +7,10 @@ class page_hotelERPApp_page_owner_customer extends page_componentBase_page_owner
 		$crud->setModel('hotelERPApp/Model_Customer');
 		if($crud->grid)
 		{
-			 $crud->grid->addQuickSearch(array('name'));
+    
+			$crud->grid->addQuickSearch(array('name'));
+	
+			$crud->grid->addPaginator(10);
 
 			$crud->add_button->set('New Customer');
 		}

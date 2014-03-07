@@ -5,6 +5,7 @@ class Model_Package extends \Model_Table
 	public $table='hotelERPApp_package';
 	function init(){
 		parent::init();
+		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		$this->hasOne('hotelERPApp/Roomcategory','roomcategory_id');
 		$this->hasOne('hotelERPApp/Roomtype','roomtype_id');
 		$this->addField('name')->caption('Package Name');

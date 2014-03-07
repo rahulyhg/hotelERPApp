@@ -6,7 +6,6 @@ class Model_Hotel extends \Model_Table{
 		parent::init();
 
 		$this->hasOne('Epan','epan_id');
-		
 
 		$this->addField('name')->caption('Branch Name');
 		$this->addField('branch_reg_no')->caption('Branch Registeration Number');
@@ -17,6 +16,11 @@ class Model_Hotel extends \Model_Table{
 		$this->addField('Level')->caption('Authentication Level');
 
 		$this->hasMany('hotelERPApp/Branch','hotel_id');
+		$this->hasMany('hotelERPApp/Customer','hotel_id');
+		$this->hasMany('hotelERPApp/Service','hotel_id');
+		$this->hasMany('hotelERPApp/Package','hotel_id');
+		$this->hasMany('hotelERPApp/Room','hotel_id');
+		$this->hasMany('hotelERPApp/Employees','hotel_id');
 
 		$this->add('dynamic_model/Controller_AutoCreator');
 

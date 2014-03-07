@@ -7,7 +7,7 @@ class page_hotelERPApp_page_owner_main extends page_componentBase_page_owner_mai
              ->set($this->component_namespace);
              
             $menu=$this->add('hotelERPApp/View_MyMenu');
-            $menu->addMenuItem('hotelERPApp_page_owner_hotel','Hotel');
+            $menu->addMenuItem('hotelERPApp_page_owner_hotel','Hotel(Owner)','info','home');
             $menu->addMenuItem('hotelERPApp_page_owner_branch','Branch');
             $menu->addMenuItem('hotelERPApp_page_owner_customer','New Customer');
             $menu->addMenuItem('hotelERPApp_page_owner_package','Package');

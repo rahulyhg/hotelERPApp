@@ -23,4 +23,6 @@ class Model_Branch extends \Model_Table
 		$this->add('dynamic_model/Controller_AutoCreator');
 
 	}
+
+	
 } 

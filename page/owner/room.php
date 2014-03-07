@@ -1,5 +1,6 @@
 <?php
 class page_hotelERPApp_page_owner_room extends page_componentBase_page_owner_main{
+	
 	function init(){
 		parent::init();
 		$crud=$this->add('CRUD'); 

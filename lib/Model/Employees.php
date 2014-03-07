@@ -5,6 +5,7 @@ class Model_Employees extends \Model_Table
 	public $table='hotelERPApp_employees';
 	function init(){
 		parent::init();
+		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		$this->hasOne('hotelERPApp/Branch','branch_id');
 		$this->hasOne('hotelERPApp/Idcardtype','idcardtype_id');
 		$this->addField('id_no')->caption('Id Card Number');
