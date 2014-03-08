@@ -11,19 +11,20 @@ class Model_Customer extends \Model_Table{
 		$this->hasOne('hotelERPApp/Roomtype','roomtype_id');
 		$this->hasOne('hotelERPApp/Idcardtype','idcardtype_id');
 		$this->addField('id_no')->caption('Id Card Number');
+	
 		$this->addField('name')->caption('Customer Name');
 		$this->addField('gender')->caption('Gender');
-		$this->addField('date')->caption('Date of Booking');
-		$this->addField('from')->caption('From');
-		$this->addField('to')->caption('To');
-		$this->addField('actual_checkin')->caption('Actual Check In Date');
-		$this->addField('actual_checkout')->caption('Actual Check Out Date');
+		$this->addField('date')->type('date')->caption('Date of Booking');
+		$this->addField('from')->type('date')->caption('From');
+		$this->addField('to')->type('date')->caption('To');
+		$this->addField('actual_checkin')->type('date')->caption('Actual Check In Date');
+		$this->addField('actual_checkout')->type('date')->caption('Actual Check Out Date');
 		$this->addField('no_of_person')->caption('Number of Persons');
 		$this->addField('room_no')->caption('Room Number');
 		$this->addField('address')->caption('Address');
 		$this->addField('contact')->caption('Contact Number');
 		$this->addField('email')->caption('Email-Id');
-		$this->addField('is_active')->caption('Is Active');
+		$this->addField('is_active')->type('boolean');
 
 		
 		$this->hasMany('hotelERPApp/Services','customer_id');

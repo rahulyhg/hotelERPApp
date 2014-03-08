@@ -14,7 +14,7 @@ class page_hotelERPApp_page_owner_customer extends page_componentBase_page_owner
 
 			$crud->add_button->set('New Customer');
 		}
-		delete 1line belowthis commenet
+		//delete 1line belowthis commenet
 		$branch=$this->add('hotelERPApp/Model_Branch');
 	}
 }
