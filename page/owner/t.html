@@ -1,0 +1,134 @@
+ <!DOCTYPE html>
+
+ <html>
+
+ <head>
+
+    <!-- Naming title and allowing for small-device-viewing -->
+    <title>Tech Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Calling StyleSheets -->
+    <link href = "bootstrap.min.css" rel = "stylesheet">
+    <link href = "main.css" rel = "stylesheet">
+
+    <!-- Calling JavaScript -->
+    <!-- Might be worth moving down to the bottom of 'body' so the page is displayed faster -->
+    <script src = "/jscript/jquery-1.10.2.min.js"></script>
+    <script src = "/jscript/bootstrap/bootstrap.js"></script>
+    <script src="/jscript/main.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Need to display:
+         - Navigation Bar
+         - Fading Picture
+         - 3 Column Testimony Preview
+         - Footer
+    -->
+
+    <!-- Navbar -->
+    <!-- Nav bar set at static to reduce overlapping at top -->
+    <div class = "navbar navbar-default navbar-static-top">
+        <div class = "container">
+
+            <a href = "#" class = "navbar-brand">Tech Site</a>
+
+            <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+
+                <ul class = "nav navbar-nav navbar-right">
+
+                    <li class = "active"><a href = "#">Home</a></li>
+                    <li><a href = "#">Blog</a></li>
+                    <li class = "dropdown">
+
+                    <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
+                    <ul class = "dropdown-menu">
+                        <li><a href = "#">Twitter</a></li>
+                        <li><a href = "#">Facebook</a></li>
+                        <li><a href = "#">Google+</a></li>
+                        <li><a href = "#">Instagram</a></li>
+                    </ul>
+
+                    </li>
+                    <li><a href = "#">About</a></li>
+                    <li><a href = "#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Main Content -->
+    <!-- Fading Image -->
+    <div class = "container">
+
+        <div class="img-responsive">
+            <img style="max-height:450px; width:100%;" src="/images/photo_1.jpg" />
+        </div>             
+
+    </div>
+
+    <div class = "container">
+
+        <div class = "row">
+
+            <div class = "col-md-3">
+
+                <h3><a href = "#">$500 Gaming PC Build</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <a href = "#" class = "btn btn-default">Read More</a>
+
+            </div>
+
+            <div class = "col-md-3">
+
+                <h3><a href = "#">$500 Gaming PC Build</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <a href = "#" class = "btn btn-default">Read More</a>
+
+            </div>
+
+            <div class = "col-md-3">
+
+                <h3><a href = "#">$500 Gaming PC Build</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <a href = "#" class = "btn btn-default">Read More</a>
+
+            </div>
+
+            <div class = "col-md-3">
+
+                <h3><a href = "#">$500 Gaming PC Build</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <a href = "#" class = "btn btn-default">Read More</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class = "navbar navbar-default navbar-fixed-bottom">
+
+        <div class = "container">
+            <p class = "navbar-text pull-left">A Site</p>
+            <a href = "#" class = "navbar-btn btn-primary btn pull-right">Find us on Facebook</a>
+        </div>
+
+    </div>
+        <!-- End of Footer --> 
+
+
+</body>
+
+</html>
