@@ -7,13 +7,13 @@ class Model_Hotel extends \Model_Table{
 
 		$this->hasOne('Epan','epan_id');
 
-		$this->addField('name')->caption('Branch Name');
-		$this->addField('branch_reg_no')->caption('Branch Registeration Number');
-		$this->addField('branch_head')->caption('Head Name');
-		$this->addField('branch_location')->caption('Location');
-		$this->addField('branch_uname')->caption('User Name');
-		$this->addField('branch_password')->caption('Password');
-		$this->addField('Level')->caption('Authentication Level');
+		$this->addField('name')->caption('Branch Name')->mandatory('cant null');
+		$this->addField('branch_reg_no')->type('int')->caption('Branch Registeration Number')->mandatory('cant null');
+		$this->addField('branch_head')->caption('Head Name')->mandatory('cant null');
+		$this->addField('branch_location')->caption('Location')->mandatory('cant null');
+		$this->addField('branch_uname')->caption('User Name')->mandatory('cant null');
+		$this->addField('branch_password')->caption('Password')->mandatory('cant null');
+		$this->addField('DropDown','Level')->setValueList(array('Branch'=>'Branch','Recep'=>'Reception'))->caption('Authentication Level')->mandatory('cant null');
 
 		$this->hasMany('hotelERPApp/Branch','hotel_id');
 		$this->hasMany('hotelERPApp/Customer','hotel_id');
