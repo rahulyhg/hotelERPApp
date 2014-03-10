@@ -12,6 +12,7 @@ class Model_Package extends \Model_Table
 		$this->addField('desc')->caption('Package Description');
 		$this->addField('pack_rate')->caption('Package Rate');
 		$this->addField('pack_duration')->caption('Package Duration');
+		$this->addField('is_active')->type('boolean');
 		
 		$this->hasMany('hotelERPApp/Customer','package_id');
 		$this->hasMany('hotelERPApp/Packageservice','package_id');

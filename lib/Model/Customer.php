@@ -14,11 +14,13 @@ class Model_Customer extends \Model_Table{
 	
 		$this->addField('name')->caption('Customer Name');
 		$this->addField('gender')->caption('Gender');
+
 		$this->addField('date')->type('date')->caption('Date of Booking');
 		$this->addField('from')->type('date')->caption('From');
 		$this->addField('to')->type('date')->caption('To');
 		$this->addField('actual_checkin')->type('date')->caption('Actual Check In Date');
 		$this->addField('actual_checkout')->type('date')->caption('Actual Check Out Date');
+
 		$this->addField('no_of_person')->caption('Number of Persons');
 		$this->addField('room_no')->caption('Room Number');
 		$this->addField('address')->caption('Address');
