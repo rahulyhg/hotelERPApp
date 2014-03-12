@@ -1,4 +1,4 @@
-ShowRoom.php<?php
+<?php
 namespace hotelERPApp;
 class Model_ShowRoom extends Model_Room{
 	
