@@ -10,23 +10,23 @@ class Model_Customer extends \Model_Table{
 		$this->hasOne('hotelERPApp/Roomcategory','roomcategory_id');
 		$this->hasOne('hotelERPApp/Roomtype','roomtype_id');
 		$this->hasOne('hotelERPApp/Idcardtype','idcardtype_id');
+
 		$this->addField('id_no')->caption('Id Card Number');
-	
-		$this->addField('name')->caption('Customer Name');
-		$this->addField('gender')->caption('Gender');
+		$this->addField('name')->caption('Customer Name')->mandatory('Cannot be Null');
+		$this->addField('gender')->caption('Gender')->mandatory('Cannot be Null');
 
-		$this->addField('date')->type('date')->caption('Date of Booking');
-		$this->addField('from')->type('date')->caption('From');
-		$this->addField('to')->type('date')->caption('To');
-		$this->addField('actual_checkin')->type('date')->caption('Actual Check In Date');
-		$this->addField('actual_checkout')->type('date')->caption('Actual Check Out Date');
+		$this->addField('date')->type('date')->caption('Date of Booking')->mandatory('Cannot be Null');
+		$this->addField('from')->type('date')->caption('From')->mandatory('Cannot be Null');
+		$this->addField('to')->type('date')->caption('To')->mandatory('Cannot be Null');
+		$this->addField('actual_checkin')->type('date')->caption('Actual Check In Date')->mandatory('Cannot be Null');
+		$this->addField('actual_checkout')->type('date')->caption('Actual Check Out Date')->mandatory('Cannot be Null');
 
-		$this->addField('no_of_person')->caption('Number of Persons');
-		$this->addField('room_no')->caption('Room Number');
-		$this->addField('address')->caption('Address');
-		$this->addField('contact')->caption('Contact Number');
-		$this->addField('email')->caption('Email-Id');
-		$this->addField('is_active')->type('boolean');
+		$this->addField('no_of_person')->caption('Number of Persons')->type('int')->mandatory('Cannot be Null');
+		$this->addField('room_no')->caption('Room Number')->mandatory('Cannot be Null');
+		$this->addField('address')->caption('Address')->mandatory('Cannot be Null');
+		$this->addField('contact')->caption('Contact Number')->type('int')->mandatory('Cannot be Null');
+		$this->addField('email')->caption('Email-Id')->mandatory('Cannot be Null');
+		$this->addField('is_active')->type('boolean')               ;
 
 		
 		$this->hasMany('hotelERPApp/Services','customer_id');

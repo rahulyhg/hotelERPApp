@@ -14,11 +14,14 @@ class page_hotelERPApp_page_owner_main extends page_componentBase_page_owner_mai
             $menu->addMenuItem('hotelERPApp_page_owner_service','Service','info');
             $menu->addMenuItem('hotelERPApp_page_owner_room','Room','info');
             $menu->addMenuItem('hotelERPApp_page_owner_packageservice','PackageService','info');
+
             $menu->addMenuItem('hotelERPApp_page_owner_configure','Configuration','info');
            
            
             $menu->addMenuItem('hotelERPApp_page_owner_employee','Employee','info');
            
+
+          
 
              
             

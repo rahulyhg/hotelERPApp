@@ -8,7 +8,7 @@ class Model_Service extends \Model_Table
 		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		$this->addField('name')->caption('Service Name');
 		$this->addField('service_desc')->caption('Service Description');
-		$this->addField('service_price')->caption('Service Price');
+		$this->addField('service_price')->caption('Service Price')->type('int');
 		$this->addField('is_active')->type('boolean');
 
 		$this->hasMany('hotelERpApp/Customer','service_id');

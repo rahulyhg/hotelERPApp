@@ -10,9 +10,9 @@ class Model_Branch extends \Model_Table
 		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		 
 		
-		$this->addField('branch_address')->caption('Address');
-		$this->addField('branch_contact_no')->caption('Contact Number');
-		$this->addField('branch_email')->caption('E-mail');
+		$this->addField('branch_address')->caption('Address')->mandatory('Cannot be Null');
+		$this->addField('branch_contact_no')->type('int')->caption('Contact Number')->mandatory('Cannot be Null');
+		$this->addField('branch_email')->caption('E-mail')->mandatory('Cannot be Null');
 
 		$this->hasMany('hotelERPApp/Package','branch_id');
 		$this->hasMany('hotelERPApp/Room','branch_id');

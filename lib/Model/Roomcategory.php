@@ -6,7 +6,7 @@ class Model_Roomcategory extends \Model_Table
 	function init(){
 		parent::init();
 		
-		$this->addField('name')->caption('Room Category');
+		$this->addField('name')->caption('Room Category')->mandatory('Cannot be Null');
 		
 		$this->hasMany('hotelERPApp/Package','roomcategory_id');
 		$this->hasMany('hotelERPApp/Room','roomcategory_id');

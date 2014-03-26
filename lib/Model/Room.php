@@ -8,7 +8,7 @@ class Model_Room extends \Model_Table
 		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		$this->hasOne('hotelERPApp/Roomtype','roomtype_id');
 		$this->hasOne('hotelERPApp/Roomcategory','roomcategory_id');
-		$this->addField('name')->caption('Room No');
+		$this->addField('name')->caption('Room No')->mandatory('Cannot be Null');
 		$this->addField('is_active')->type('boolean');
 		
 	    $this->add('dynamic_model/Controller_AutoCreator');
