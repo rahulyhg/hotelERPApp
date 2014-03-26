@@ -6,13 +6,7 @@ class page_hotelERPApp_page_owner_employee extends page_componentBase_page_owner
 		$this->h1->add('H1')->setElement('a')
              ->setAttr('href','?page=hotelERPApp_page_owner_main')
              ->set($this->component_namespace);
-		// $crud=$this->add('CRUD'); 
-		// $crud->setModel('hotelERPApp/Model_Employees');
-		// if($crud->grid)
-		// {
-
-		// 	$crud->add_button->set('Add New Employee');
-		// }
+		
 
 
 		$menu=$this->add('hotelERPApp/View_MyMenu');

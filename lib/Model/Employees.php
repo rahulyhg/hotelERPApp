@@ -14,7 +14,7 @@ class Model_Employees extends \Model_Table
 		$this->addField('f_name')->caption('Father Name');
 		$this->addField('emp_code')->caption('Employee Code');
 		$this->addField('dept_name')->caption('Department Name');
-		//$this->addField('id_type')->caption('Id Card Type');
+		
 		$this->addField('contact')->caption('Contact Number');
 		$this->addField('address')->caption('Address');
 		$this->addField('hire_date')->type('date')->caption('Hire Date');

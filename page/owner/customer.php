@@ -6,15 +6,7 @@ class page_hotelERPApp_page_owner_customer extends page_componentBase_page_owner
 		$this->h1->add('H1')->setElement('a')
              ->setAttr('href','?page=hotelERPApp_page_owner_main')
              ->set($this->component_namespace);
-		// if($crud->grid)
-		// {
-    
-		// 	$crud->grid->addQuickSearch(array('name'));
-	
-		// 	$crud->grid->addPaginator(10);
-
-		// 	$crud->add_button->set('New Customer');
-		// }
+		
 		
 		$menu=$this->add('hotelERPApp/View_MyMenu');
 		$menu->addMenuItem('hotelERPApp_page_owner_newcustomer','New Customer','info','plus');

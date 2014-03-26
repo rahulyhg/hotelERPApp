@@ -13,11 +13,12 @@ class page_hotelERPApp_page_owner_main extends page_componentBase_page_owner_mai
             $menu->addMenuItem('hotelERPApp_page_owner_package','Package','info','briefcase');
             $menu->addMenuItem('hotelERPApp_page_owner_service','Service','info');
             $menu->addMenuItem('hotelERPApp_page_owner_room','Room','info');
-            $menu->addMenuItem('hotelERPApp_page_owner_packageservice','Package Service','info');
-            $menu->addMenuItem('hotelERPApp_page_owner_roomcategory','Room Category','info');
-            $menu->addMenuItem('hotelERPApp_page_owner_roomtype','Room Type','info');
+            $menu->addMenuItem('hotelERPApp_page_owner_packageservice','PackageService','info');
+            $menu->addMenuItem('hotelERPApp_page_owner_configure','Configuration','info');
+           
+           
             $menu->addMenuItem('hotelERPApp_page_owner_employee','Employee','info');
-            $menu->addMenuItem('hotelERPApp_page_owner_idcardtype','Id Type','info');
+           
 
              
             
