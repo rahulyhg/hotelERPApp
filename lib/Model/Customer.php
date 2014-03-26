@@ -24,7 +24,7 @@ class Model_Customer extends \Model_Table{
 		$this->addField('no_of_person')->caption('Number of Persons')->type('int')->mandatory('Cannot be Null');
 		$this->addField('room_no')->caption('Room Number')->mandatory('Cannot be Null');
 		$this->addField('address')->caption('Address')->mandatory('Cannot be Null');
-		$this->addField('contact')->caption('Contact Number')type('int')->mandatory('Cannot be Null');
+		$this->addField('contact')->caption('Contact Number')->type('int')->mandatory('Cannot be Null');
 		$this->addField('email')->caption('Email-Id')->mandatory('Cannot be Null');
 		$this->addField('is_active')->type('boolean')               ;
 
