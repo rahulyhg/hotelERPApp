@@ -13,7 +13,7 @@ class Model_Customer extends \Model_Table{
 
 		$this->addField('id_no')->caption('Id Card Number');
 		$this->addField('name')->caption('Customer Name')->mandatory('Cannot be Null');
-		$this->addField('gender')->caption('Gender')->mandatory('Cannot be Null');
+		$this->addField('gender')->type('radio')->caption('Gender')->setValueList(array('M'=>'Male','F'=>'Female'))->mandatory('Cannot be Null');
 
 		$this->addField('date')->type('date')->caption('Date of Booking')->mandatory('Cannot be Null');
 		$this->addField('from')->type('date')->caption('From')->mandatory('Cannot be Null');

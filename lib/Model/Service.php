@@ -14,8 +14,30 @@ class Model_Service extends \Model_Table
 		$this->hasMany('hotelERpApp/Customer','service_id');
 		$this->hasMany('hotelERpApp/Packageservice','service_id');
 		
+		$this->addHook('beforeSave',$this);
+
 		$this->add('dynamic_model/Controller_AutoCreator');
-	    
+
 	}
+	function beforeSave()
+    {
+		   $service=$this->add('hotelERPApp/Model_Service');
+
+	       if($this->loaded()) 
+		   {
+			  $service->addCondition('id','<>',$this->id);
+		   
+		     }
+
+			$service->addCondition('name',$this['name']);
+			$service->tryLoadAny();
+			
+			if($service->loaded())
+			{
+				//throw $this->exception('It`s already exist');
+				$this->api->js()->univ()->closeDialog()->errorMessage('It`s already exist')->execute();
+			}
+		
+	 }
 }
 

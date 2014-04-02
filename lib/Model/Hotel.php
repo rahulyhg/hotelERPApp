@@ -22,7 +22,25 @@ class Model_Hotel extends \Model_Table{
 		$this->hasMany('hotelERPApp/Room','hotel_id');
 		$this->hasMany('hotelERPApp/Employees','hotel_id');
 
+		$this->addHook('beforeDelete',$this);
+
 		$this->add('dynamic_model/Controller_AutoCreator');
 
 	}
+
+	function beforeDelete(){
+	if($this->ref('hotelERPApp/Branch')->count()->getOne()>0)
+	throw $this->exception('Please delete branch details first');
+
+	if($this->ref('hotelERPApp/Service')->count()->getOne()>0)
+	throw $this->exception('Please delete service details first');
+
+	if($this->ref('hotelERPApp/Package')->count()->getOne()>0)
+	throw $this->exception('Please delete package details first');
+
+	if($this->ref('hotelERPApp/Room')->count()->getOne()>0)
+	throw $this->exception('Please delete room details first');
+	
+	
+}
 } 

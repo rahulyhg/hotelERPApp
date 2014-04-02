@@ -16,6 +16,30 @@ class Model_Package extends \Model_Table
 		
 		$this->hasMany('hotelERPApp/Customer','package_id');
 		$this->hasMany('hotelERPApp/Packageservice','package_id');
+
+		$this->addHook('beforeSave',$this);
+
 		$this->add('dynamic_model/Controller_AutoCreator');
+
 	}
+	function beforeSave()
+    {
+		   $package=$this->add('hotelERPApp/Model_Package');
+
+	       if($this->loaded()) 
+		   {
+			  $package->addCondition('id','<>',$this->id);
+		   
+		     }
+
+			$package->addCondition('name',$this['name']);
+			$package->tryLoadAny();
+			
+			if($package->loaded())
+			{
+				//throw $this->exception('It`s already exist');
+				$this->api->js()->univ()->closeDialog()->errorMessage('It`s already exist')->execute();
+			}
+		
+	 }
 }

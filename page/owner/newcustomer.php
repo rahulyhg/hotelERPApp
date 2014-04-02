@@ -35,7 +35,7 @@ class page_hotelERPApp_page_owner_newcustomer extends page_componentBase_page_ow
 		// ----
 		$form->addField('line','id_card_no');
 		$form->addField('line','name');
-		$form->addField('radio','gender');
+		$form->addField('radio','gender')->setValueList(array('M'=>'Male','F'=>'Female'));
 
 		$form->addField('DatePicker','date');
 		$form->addField('DatePicker','from');
