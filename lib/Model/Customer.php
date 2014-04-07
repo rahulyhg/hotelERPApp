@@ -19,7 +19,7 @@ class Model_Customer extends \Model_Table{
 		$this->addField('from')->type('date')->caption('From')->mandatory('Cannot be Null');
 		$this->addField('to')->type('date')->caption('To')->mandatory('Cannot be Null');
 		$this->addField('actual_checkin')->type('date')->caption('Actual Check In Date')->mandatory('Cannot be Null');
-		$this->addField('actual_checkout')->type('date')->caption('Actual Check Out Date')->mandatory('Cannot be Null');
+		$this->addField('actual_checkout')->type('date')->caption('Actual Check Out Date');//->mandatory('Cannot be Null');
 
 		$this->addField('no_of_person')->caption('Number of Persons')->type('int')->mandatory('Cannot be Null');
 		$this->addField('room_no')->caption('Room Number')->mandatory('Cannot be Null');

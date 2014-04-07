@@ -10,9 +10,12 @@ class Model_Branch extends \Model_Table
 		$this->hasOne('hotelERPApp/Hotel','hotel_id');
 		 
 		
-		$this->addField('branch_address')->caption('Address')->mandatory('Cannot be Null');
-		$this->addField('branch_contact_no')->type('int')->caption('Contact Number')->mandatory('Cannot be Null');
-		$this->addField('branch_email')->caption('E-mail')->mandatory('Cannot be Null');
+		$this->addField('name')->caption('Branch Name')->mandatory('Cannot be Null');
+		$this->addField('branchhead_name');
+		$this->addField('contact_no')->mandatory('Cannot be Null');
+		$this->addField('email')->mandatory('Cannot be Null');
+		$this->addField('address')->mandatory('Cannot be Null');
+		$this->addField('password');
 
 		$this->hasMany('hotelERPApp/Package','branch_id');
 		$this->hasMany('hotelERPApp/Room','branch_id');
@@ -44,6 +47,46 @@ class Model_Branch extends \Model_Table
 				$this->api->js()->univ()->closeDialog()->errorMessage('It`s already exist')->execute();
 			}
 		
+	 }
+
+	 function isActive(){
+
+	 	$employee=$this->add('hotelERPAppApp/Model_Branch');
+
+		$employee->addCondition('name',$name);
+		$employee->tryLoadAny();
+
+		if($employee->loaded()){
+
+			return true;
+		}
+		else{
+
+			return false;
+		}
+
+	 }
+
+	 function login(){
+
+	 	$employer=$this->add('hotelERPAppApp/Model_Branch');
+
+		$employee->addCondition('email',$email); 
+		$employee->addCondition('password',$password);
+		$employee->tryLoadAny();
+		if($employee->loaded()){
+			$this->api->memorize('logged_in_user',$email);
+			$this->api->memorize('type_of_user',$email);
+			return true;
+			}
+			else{
+				$this->api->forget('logged_in_user',$email);
+				$this->api->forget('type_of_user',$email);
+				return false;
+				
+			}
+
+	 	
 	 }
 
 	
