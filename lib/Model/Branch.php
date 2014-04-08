@@ -67,7 +67,7 @@ class Model_Branch extends \Model_Table
 
 	 }
 
-	 function login(){
+	 function tryLogin(){
 
 	 	$employer=$this->add('hotelERPAppApp/Model_Branch');
 
