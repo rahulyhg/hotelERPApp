@@ -26,7 +26,7 @@ class View_Server_EmployeeManagement extends \View{
 				if($_GET['delete']){
 					$empdel=$this->add('hotelERPApp/Model_Employees');
 					$empdel->load($_GET['delete']);
-					$empedel->delete();
+					$empdel->delete();
 					$g->js(null,$g->js()->univ()->successMessage('Done'))->reload()->execute();
 				}
 }
