@@ -6,6 +6,9 @@ class View_Server_Booking extends \View{
 	function init(){
 		parent::init();
 
-		$this->add('View_Info')->set('I am Booking View');
+
+			$customer=$this->add('hotelERPApp/Model_Customer');
+				$g=$this->add('CRUD');
+				$g->setModel($customer);
 	}
 }

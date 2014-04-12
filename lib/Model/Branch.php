@@ -20,7 +20,7 @@ class Model_Branch extends \Model_Table
 		$this->hasMany('hotelERPApp/Package','branch_id');
 		$this->hasMany('hotelERPApp/Room','branch_id');
 		$this->hasMany('hotelERPApp/Customer','branch_id');
-		$this->hasMany('hotelERPApp/Employees','branch_id');
+		$this->hasMany('hotelERPApp/branchs','branch_id');
 		$this->hasMany('hotelERPApp/Service','branch_id');
 
 		$this->addHook('beforeSave',$this);
@@ -51,12 +51,12 @@ class Model_Branch extends \Model_Table
 
 	 function isActive(){
 
-	 	$employee=$this->add('hotelERPAppApp/Model_Branch');
+	 	$branch=$this->add('hotelERPAppApp/Model_Branch');
 
-		$employee->addCondition('name',$name);
-		$employee->tryLoadAny();
+		$branch->addCondition('name',$name);
+		$branch->tryLoadAny();
 
-		if($employee->loaded()){
+		if($branch->loaded()){
 
 			return true;
 		}
@@ -67,14 +67,15 @@ class Model_Branch extends \Model_Table
 
 	 }
 
-	 function tryLogin(){
+	 function tryLogin($email,$password){
 
-	 	$employer=$this->add('hotelERPAppApp/Model_Branch');
+	 	$branch=$this->add('hotelERPApp/Model_Branch');
 
-		$employee->addCondition('email',$email); 
-		$employee->addCondition('password',$password);
-		$employee->tryLoadAny();
-		if($employee->loaded()){
+		$branch->addCondition('email',$email); 
+		$branch->addCondition('password',$password);
+		$branch->tryLoadAny();
+
+		if($branch->loaded()){
 			$this->api->memorize('logged_in_user',$email);
 			$this->api->memorize('type_of_user',$email);
 			return true;
@@ -90,4 +91,4 @@ class Model_Branch extends \Model_Table
 	 }
 
 	
-} 
+}

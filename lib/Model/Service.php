@@ -6,6 +6,7 @@ class Model_Service extends \Model_Table
 	function init(){
 		parent::init();
 		$this->hasOne('hotelERPApp/Hotel','hotel_id');
+		$this->hasOne('hotelERPApp/Branch','branch_id');
 		$this->addField('name')->caption('Service Name');
 		$this->addField('service_desc')->caption('Service Description');
 		$this->addField('service_price')->caption('Service Price')->type('int');

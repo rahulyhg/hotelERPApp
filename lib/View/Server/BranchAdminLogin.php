@@ -21,6 +21,7 @@ class View_Server_BranchAdminLogin extends \View{
 		if($form->isSubmitted()){
 		
 			$employer=$this->add('hotelERPApp/Model_Branch');
+				
 		 	if(!$employer->tryLogin($form['email'],$form['password']))
 		 		$form->displayError('email','Wrong input');
 		 	
