@@ -6,7 +6,8 @@ class View_Server_EmployeeManagement extends \View{
 		parent::init();
 				$emp=$this->add('hotelERPApp/Model_Employees');
 				$g=$this->add('Grid');
-				$g->setModel($emp);
+				$emp_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Employees');
+				$g->setModel($emp_model);
 
 				$add=$g->addButton('Add Employee');
 				$add->js('click',$this->js()->univ()->frameURL('Add Employee',$this->api->url('hotelERPApp_page_employee')));

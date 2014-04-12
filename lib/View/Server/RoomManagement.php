@@ -8,7 +8,8 @@ class View_Server_RoomManagement extends \View{
 
 				$room=$this->add('hotelERPApp/Model_Room');
 				$g=$this->add('Grid');
-				$g->setModel($room);
+				$room_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Room');
+				$g->setModel($room_model);
 
 				$add=$g->addButton('Add Room');
 				$add->js('click',$this->js()->univ()->frameURL('Add Room',$this->api->url('hotelERPApp_page_room')));

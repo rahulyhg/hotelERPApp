@@ -10,7 +10,7 @@ class page_hotelERPApp_page_employee extends Page
 			$this->api->stickyGET('employee_id');
 			
 			$form=$this->add('Form');
-			$emp_model=$this->add('hotelERPApp/Model_Employees');
+			$emp_model=$service_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Employees');
 			if($_GET['employee_id'])
 			$emp_model->load($_GET['employee_id']);
 			$form->setModel($emp_model);

@@ -8,7 +8,8 @@ class View_Server_PackageManagement extends \View{
 
 				$package=$this->add('hotelERPApp/Model_Package');
 				$g=$this->add('Grid');
-				$g->setModel($package);
+				$package_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Package');
+				$g->setModel($package_model);
 
 				$add=$g->addButton('Add Package');
 				$add->js('click',$this->js()->univ()->frameURL('Add Package',$this->api->url('hotelERPApp_page_package')));

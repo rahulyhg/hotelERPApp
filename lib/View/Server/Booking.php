@@ -8,11 +8,15 @@ class View_Server_Booking extends \View{
 
 				$cust=$this->add('hotelERPApp/Model_Customer');
 				$g=$this->add('Grid');
-				$g->setModel($cust);
+				$cust_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Customer');
+				$g->setModel($cust_model);
 
 				$add=$g->addButton('Add Customer');
 				$add->js('click',$this->js()->univ()->frameURL('Add Customer',$this->api->url('hotelERPApp_page_customer')));
 
+				$g->addColumn('button','checkin');
+				$g->addColumn('button','checkout');
+				$g->addColumn('button','cancle');
 				$g->addColumn('button','edit');
 				$g->addColumn('button','delete');
 

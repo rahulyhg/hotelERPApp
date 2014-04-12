@@ -10,7 +10,8 @@ class View_Server_ServiceManagement extends \View{
 
 				$service=$this->add('hotelERPApp/Model_Service');
 				$g=$this->add('Grid');
-				$g->setModel($service);
+				$service_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Service');
+				$g->setModel($service_model);
 
 				$add=$g->addButton('Add Service');
 				$add->js('click',$this->js()->univ()->frameURL('Add Service',$this->api->url('hotelERPApp_page_service')));

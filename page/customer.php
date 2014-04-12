@@ -10,7 +10,7 @@ class page_hotelERPApp_page_customer extends Page
 			$this->api->stickyGET('customer_id');
 			
 			$form=$this->add('Form');
-			$cust_model=$this->add('hotelERPApp/Model_Customer');
+			$cust_model=$service_model=$this->api->xhotelerpauth->model->ref('hotelERPApp/Customer');
 			if($_GET['customer_id'])
 			$emp_model->load($_GET['customer_id']);
 			$form->setModel($cust_model);

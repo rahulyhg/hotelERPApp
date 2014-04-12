@@ -20,7 +20,7 @@ class Model_Branch extends \Model_Table
 		$this->hasMany('hotelERPApp/Package','branch_id');
 		$this->hasMany('hotelERPApp/Room','branch_id');
 		$this->hasMany('hotelERPApp/Customer','branch_id');
-		$this->hasMany('hotelERPApp/branchs','branch_id');
+		$this->hasMany('hotelERPApp/Employees','branch_id');
 		$this->hasMany('hotelERPApp/Service','branch_id');
 
 		$this->addHook('beforeSave',$this);
